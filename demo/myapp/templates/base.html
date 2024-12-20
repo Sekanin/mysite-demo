@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Django App
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        .hero {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+        }
+        .product-card {
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!--<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <a class="navbar-brand" href="#">My Django App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+    
+    <div class="hero text-center">
+        <h1 class="text-primary">Выберите изделие</h1>
+        <p class="lead">Просмотрите наши замечательные продукты</p>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Сбш</h5>
+                        <p class="card-text">Описание продукта Сбш.</p>
+                        <a href="sbsh.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Q800</h5>
+                        <p class="card-text">Описание продукта Q800.</p>
+                        <a href="q800.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Универсал 900</h5>
+                        <p class="card-text">Описание продукта Универсал 900.</p>
+                        <a href="universal900.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-white text-center py-4 shadow-sm">
+        <p class="mb-0">&copy; Нива Мотор. Все права защищены.</p>
+    </footer>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
